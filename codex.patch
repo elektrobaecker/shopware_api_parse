@@ -1,0 +1,1145 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000000000000000000000000000000000000..31e8fa71a609dd8aae2c4e5bb46974d7155583c5
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,14 @@
++__pycache__/
++*.pyc
++*.pyo
++*.egg-info/
++.venv/
++.env
++.env.local
++work/
++work/**
++.envrc
++.cache/
++.mypy_cache/
++.pytest_cache/
++.DS_Store
+diff --git a/README.md b/README.md
+index 1df28be7ac698705142b86bf03fdff624aa47e10..4e4932110b1bf1d10d62911a70be08593b612446 100644
+GIT binary patch
+literal 4912
+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
+
+literal 90
+wcmezWPnki1p_n0qA)ldup`0O+p@<=sAs$E<Fk}Mh0<cIiP>h#>i-8oi0DRvOssI20
+
+diff --git a/config.yml b/config.yml
+new file mode 100644
+index 0000000000000000000000000000000000000000..39b6f0ed10334f190c36608645cff50fe8db9105
+--- /dev/null
++++ b/config.yml
+@@ -0,0 +1,16 @@
++source: "dotlux"
++log_level: "INFO"
++
++paths:
++  work_dir: "work"
++
++database:
++  url: "postgresql+psycopg://shopware:shopware@localhost:5432/shopware_bmecat"
++
++shopware:
++  api_url: "https://shopware.example.com"
++  token_url: "https://shopware.example.com/api/oauth/token"
++  client_id: "change-me"
++  client_secret: "change-me"
++  batch_size: 250
++  verify_ssl: true
+diff --git a/pyproject.toml b/pyproject.toml
+new file mode 100644
+index 0000000000000000000000000000000000000000..87e2b3b1d835d0d54f95b1053f41ec7f6cd00229
+--- /dev/null
++++ b/pyproject.toml
+@@ -0,0 +1,24 @@
++[project]
++name = "shopware-bmecat"
++version = "0.1.0"
++requires-python = ">=3.11"
++description = "BMEcat to Shopware 6 product data pipeline"
++authors = [{name = "Shopware Pipeline", email = "dev@example.com"}]
++readme = "README.md"
++license = {text = "MIT"}
++dependencies = [
++    "typer>=0.12.3",
++    "pyyaml>=6.0.1",
++    "requests>=2.31.0",
++    "sqlalchemy>=2.0.29",
++    "psycopg[binary]>=3.1.18",
++    "python-dateutil>=2.9.0.post0",
++    "tqdm>=4.66.4",
++]
++
++[project.scripts]
++shopware-bmecat = "shopware_bmecat.cli:main"
++
++[build-system]
++requires = ["setuptools>=65", "wheel"]
++build-backend = "setuptools.build_meta"
+diff --git a/src/shopware_bmecat/__init__.py b/src/shopware_bmecat/__init__.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..a1fbf437596e8e03982d559da98ee2dc3baa2f53
+--- /dev/null
++++ b/src/shopware_bmecat/__init__.py
+@@ -0,0 +1,12 @@
++"""Shopware BMEcat import service package."""
++
++__all__ = [
++    "cli",
++    "ingest",
++    "parse_bmecat",
++    "normalize",
++    "delta",
++    "staging",
++    "shopware_sync",
++    "logging_utils",
++]
+diff --git a/src/shopware_bmecat/cli.py b/src/shopware_bmecat/cli.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..67bd0eb79582645279e2e8bf2b7eb9ab68c449af
+--- /dev/null
++++ b/src/shopware_bmecat/cli.py
+@@ -0,0 +1,227 @@
++"""Command line interface for the Shopware BMEcat pipeline."""
++from __future__ import annotations
++
++import json
++import logging
++from dataclasses import dataclass
++from pathlib import Path
++from typing import Optional
++
++import typer
++import yaml
++
++from . import delta as delta_module
++from . import ingest as ingest_module
++from . import normalize as normalize_module
++from . import parse_bmecat
++from . import staging as staging_module
++from .logging_utils import configure_logging
++from .shopware_sync import ShopwareConfig, ShopwareSyncClient
++
++app = typer.Typer(help="Shopware BMEcat product data pipeline")
++logger = logging.getLogger(__name__)
++
++
++@dataclass
++class AppConfig:
++    source: str
++    database_url: str
++    work_dir: Path
++    shopware: ShopwareConfig
++    log_level: str = "INFO"
++
++    @classmethod
++    def from_yaml(cls, config_path: Path) -> "AppConfig":
++        if not config_path.exists():
++            raise FileNotFoundError(f"Config file not found: {config_path}")
++        with config_path.open("r", encoding="utf-8") as handle:
++            raw = yaml.safe_load(handle) or {}
++
++        source = raw.get("source", "default")
++        db_cfg = raw.get("database", {})
++        database_url = db_cfg.get("url")
++        if not database_url:
++            raise ValueError("database.url is required in config.yml")
++
++        paths_cfg = raw.get("paths", {})
++        base_dir = config_path.parent
++        work_dir_value = paths_cfg.get("work_dir", "work")
++        work_dir = Path(work_dir_value).expanduser()
++        if not work_dir.is_absolute():
++            work_dir = (base_dir / work_dir).resolve()
++
++        shopware_cfg = raw.get("shopware", {})
++        shopware = ShopwareConfig(
++            api_url=shopware_cfg.get("api_url", "http://localhost:8000"),
++            token_url=shopware_cfg.get("token_url", "http://localhost:8000/api/oauth/token"),
++            client_id=shopware_cfg.get("client_id", ""),
++            client_secret=shopware_cfg.get("client_secret", ""),
++            batch_size=int(shopware_cfg.get("batch_size", 250)),
++            verify_ssl=bool(shopware_cfg.get("verify_ssl", True)),
++        )
++
++        log_level = raw.get("log_level", "INFO")
++
++        return cls(
++            source=source,
++            database_url=database_url,
++            work_dir=work_dir,
++            shopware=shopware,
++            log_level=log_level,
++        )
++
++
++def _load_config(config: Optional[str]) -> AppConfig:
++    config_path = Path(config or "config.yml")
++    app_config = AppConfig.from_yaml(config_path)
++    configure_logging(log_dir=app_config.work_dir / "logs", level=app_config.log_level)
++    return app_config
++
++
++def _resolve_run_id(staging: staging_module.StagingDAO, run_id: Optional[int], expected_status: str) -> int:
++    resolved = run_id or staging.latest_run_by_status(expected_status)
++    if not resolved:
++        raise typer.BadParameter(f"No import run found with status '{expected_status}'")
++    return resolved
++
++
++def _ingest_payload(app_config: AppConfig, payload: Path) -> tuple[int, Path]:
++    staging = staging_module.StagingDAO(app_config.database_url)
++    staging.ensure_schema()
++    xml_path = ingest_module.ingest_input(payload, app_config.work_dir)
++    run_id = staging.start_import_run(source=app_config.source, payload_path=str(xml_path))
++    return run_id, xml_path
++
++
++def _parse_run(app_config: AppConfig, run_id: int) -> int:
++    staging = staging_module.StagingDAO(app_config.database_url)
++    run = staging.get_run(run_id)
++    if not run:
++        raise typer.BadParameter(f"Import run not found: {run_id}")
++    xml_path = Path(run["payload_path"])
++    count = 0
++    for raw_product in parse_bmecat.parse_bmecat(xml_path):
++        staging.insert_raw_product(run_id, app_config.source, raw_product)
++        count += 1
++    staging.update_run_status(run_id, "parsed", message=f"Parsed {count} products")
++    logger.info("Parsed products", extra={"run_id": run_id, "count": count})
++    return count
++
++
++def _normalize_run(app_config: AppConfig, run_id: int) -> int:
++    staging = staging_module.StagingDAO(app_config.database_url)
++    count = 0
++    for raw in staging.stream_raw_products(run_id):
++        canonical = normalize_module.normalize_product(raw, app_config.source)
++        staging.insert_normalized_product(run_id, app_config.source, canonical)
++        staging.enqueue_media(app_config.source, canonical["external_id"], canonical.get("images", []))
++        count += 1
++    staging.update_run_status(run_id, "normalized", message=f"Normalized {count} products")
++    logger.info("Normalized products", extra={"run_id": run_id, "count": count})
++    return count
++
++
++def _delta_run(app_config: AppConfig, run_id: int) -> int:
++    staging = staging_module.StagingDAO(app_config.database_url)
++    canonical_products = staging.stream_normalized_products(run_id)
++    count = 0
++    for _ in delta_module.detect_deltas(staging, app_config.source, canonical_products, run_id):
++        count += 1
++    staging.update_run_status(run_id, "delta_ready", message=f"Detected {count} deltas")
++    logger.info("Delta detection complete", extra={"run_id": run_id, "count": count})
++    return count
++
++
++def _shopware_import_run(app_config: AppConfig, run_id: int) -> int:
++    staging = staging_module.StagingDAO(app_config.database_url)
++    client = ShopwareSyncClient(app_config.shopware)
++    delta_rows = staging.pending_deltas(run_id)
++    payloads = []
++    delta_ids = []
++    for row in delta_rows:
++        product_payload = dict(row.get("payload", {}))
++        product_payload.setdefault("source", row.get("source"))
++        payloads.append(product_payload)
++        delta_ids.append(row.get("id"))
++    client.sync_delta(payloads)
++    staging.mark_delta_status(delta_ids, status="imported")
++    staging.update_run_status(run_id, "imported", message=f"Imported {len(payloads)} deltas")
++    logger.info("Shopware import complete", extra={"run_id": run_id, "count": len(payloads)})
++    return len(payloads)
++
++
++@app.command()
++def ingest(payload: Path, config: Optional[str] = typer.Option("config.yml", help="Path to config file")) -> None:
++    """Stage a ZIP or XML payload and start a new import run."""
++
++    app_config = _load_config(config)
++    run_id, staged_path = _ingest_payload(app_config, payload)
++    typer.echo(json.dumps({"run_id": run_id, "xml_path": str(staged_path)}))
++
++
++@app.command("parse")
++def parse_command(run_id: Optional[int] = typer.Option(None, help="Import run id"), config: Optional[str] = typer.Option("config.yml")) -> None:
++    """Parse the staged XML into the raw staging table."""
++
++    app_config = _load_config(config)
++    staging = staging_module.StagingDAO(app_config.database_url)
++    resolved_run_id = _resolve_run_id(staging, run_id, expected_status="ingested")
++    count = _parse_run(app_config, resolved_run_id)
++    typer.echo(json.dumps({"run_id": resolved_run_id, "parsed": count}))
++
++
++@app.command("normalize")
++def normalize_command(run_id: Optional[int] = typer.Option(None), config: Optional[str] = typer.Option("config.yml")) -> None:
++    """Normalize raw products into the canonical model."""
++
++    app_config = _load_config(config)
++    staging = staging_module.StagingDAO(app_config.database_url)
++    resolved_run_id = _resolve_run_id(staging, run_id, expected_status="parsed")
++    count = _normalize_run(app_config, resolved_run_id)
++    typer.echo(json.dumps({"run_id": resolved_run_id, "normalized": count}))
++
++
++@app.command("delta")
++def delta_command(run_id: Optional[int] = typer.Option(None), config: Optional[str] = typer.Option("config.yml")) -> None:
++    """Compute deltas against previous imports."""
++
++    app_config = _load_config(config)
++    staging = staging_module.StagingDAO(app_config.database_url)
++    resolved_run_id = _resolve_run_id(staging, run_id, expected_status="normalized")
++    count = _delta_run(app_config, resolved_run_id)
++    typer.echo(json.dumps({"run_id": resolved_run_id, "deltas": count}))
++
++
++@app.command("shopware-import")
++def shopware_import_command(run_id: Optional[int] = typer.Option(None), config: Optional[str] = typer.Option("config.yml")) -> None:
++    """Import delta products into Shopware via the Sync API."""
++
++    app_config = _load_config(config)
++    staging = staging_module.StagingDAO(app_config.database_url)
++    resolved_run_id = _resolve_run_id(staging, run_id, expected_status="delta_ready")
++    count = _shopware_import_run(app_config, resolved_run_id)
++    typer.echo(json.dumps({"run_id": resolved_run_id, "imported": count}))
++
++
++@app.command("run-all")
++def run_all(payload: Path, config: Optional[str] = typer.Option("config.yml")) -> None:
++    """Execute the full ingestion-to-Shopware pipeline in one run."""
++
++    app_config = _load_config(config)
++    staging = staging_module.StagingDAO(app_config.database_url)
++    staging.ensure_schema()
++
++    run_id, _ = _ingest_payload(app_config, payload)
++    _parse_run(app_config, run_id)
++    _normalize_run(app_config, run_id)
++    _delta_run(app_config, run_id)
++    _shopware_import_run(app_config, run_id)
++    typer.echo(json.dumps({"run_id": run_id, "status": "imported"}))
++
++
++def main() -> None:  # pragma: no cover - CLI entrypoint
++    app()
++
++
++if __name__ == "__main__":  # pragma: no cover - CLI entrypoint guard
++    main()
+diff --git a/src/shopware_bmecat/delta.py b/src/shopware_bmecat/delta.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..e1f904d49d27f45b7243092a6c7c229bfe948241
+--- /dev/null
++++ b/src/shopware_bmecat/delta.py
+@@ -0,0 +1,45 @@
++"""Delta detection logic."""
++from __future__ import annotations
++
++import hashlib
++import json
++import logging
++from typing import Dict, Iterable, Iterator
++
++from .staging import StagingDAO
++
++logger = logging.getLogger(__name__)
++
++
++def product_hash(product: Dict) -> str:
++    """Compute a stable hash for a canonical product."""
++
++    serialized = json.dumps(product, sort_keys=True, ensure_ascii=False)
++    return hashlib.sha256(serialized.encode("utf-8")).hexdigest()
++
++
++def detect_deltas(
++    staging: StagingDAO,
++    source: str,
++    canonical_products: Iterable[Dict],
++    import_run_id: int,
++) -> Iterator[Dict]:
++    """Yield delta products and persist them to the staging database."""
++
++    latest_hashes = staging.fetch_latest_hashes(source)
++    logger.info("Loaded latest hashes", extra={"count": len(latest_hashes)})
++
++    for product in canonical_products:
++        try:
++            current_hash = product_hash(product)
++            external_id = product["external_id"]
++            if latest_hashes.get(external_id) != current_hash:
++                staging.insert_delta_record(import_run_id, source, product, current_hash)
++                latest_hashes[external_id] = current_hash
++                logger.debug("Delta detected", extra={"external_id": external_id})
++                yield {**product, "hash": current_hash}
++        except Exception as exc:  # pragma: no cover - defensive parsing
++            logger.exception("Failed to compute delta", exc_info=exc, extra={"product": product})
++
++
++__all__ = ["product_hash", "detect_deltas"]
+diff --git a/src/shopware_bmecat/ingest.py b/src/shopware_bmecat/ingest.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..15b0cd16901d04fa614b5dd19eebb916c48ba0cd
+--- /dev/null
++++ b/src/shopware_bmecat/ingest.py
+@@ -0,0 +1,76 @@
++"""Input ingestion utilities.
++
++This module accepts incoming BMEcat payloads (ZIP or XML) and stages them into
++runtime input directories. No parsing or validation happens here beyond basic
++safety checks.
++"""
++from __future__ import annotations
++
++import logging
++import shutil
++import tempfile
++import zipfile
++from pathlib import Path
++from typing import Tuple
++
++logger = logging.getLogger(__name__)
++
++
++class IngestError(RuntimeError):
++    """Raised when an incoming payload cannot be staged."""
++
++
++def ensure_workdir(work_dir: Path) -> Tuple[Path, Path, Path]:
++    """Ensure runtime work directories exist."""
++
++    input_dir = work_dir / "input"
++    output_dir = work_dir / "output"
++    logs_dir = work_dir / "logs"
++    input_dir.mkdir(parents=True, exist_ok=True)
++    output_dir.mkdir(parents=True, exist_ok=True)
++    logs_dir.mkdir(parents=True, exist_ok=True)
++    logger.debug("Ensured work directories", extra={"work_dir": str(work_dir)})
++    return input_dir, output_dir, logs_dir
++
++
++def ingest_input(payload_path: Path, work_dir: Path) -> Path:
++    """Stage a ZIP or XML payload into the input directory.
++
++    Returns the path to the staged XML file. ZIP archives are extracted into a
++    temporary directory inside the input folder and the first XML file is
++    returned.
++    """
++
++    if not payload_path.exists():
++        raise IngestError(f"Payload not found: {payload_path}")
++
++    input_dir, _, _ = ensure_workdir(work_dir)
++
++    if payload_path.suffix.lower() == ".xml":
++        target_path = input_dir / payload_path.name
++        shutil.copy2(payload_path, target_path)
++        logger.info("XML payload staged", extra={"target": str(target_path)})
++        return target_path
++
++    if payload_path.suffix.lower() == ".zip":
++        with tempfile.TemporaryDirectory(dir=input_dir) as tmpdir:
++            with zipfile.ZipFile(payload_path, "r") as archive:
++                archive.extractall(tmpdir)
++                xml_candidates = sorted(Path(tmpdir).rglob("*.xml"))
++                if not xml_candidates:
++                    raise IngestError("ZIP archive did not contain an XML file")
++                staged_dir = input_dir / payload_path.stem
++                if staged_dir.exists():
++                    shutil.rmtree(staged_dir)
++                shutil.copytree(tmpdir, staged_dir)
++                target_xml = staged_dir / xml_candidates[0].name
++                logger.info(
++                    "ZIP payload staged",
++                    extra={"staged_dir": str(staged_dir), "xml": str(target_xml)},
++                )
++                return target_xml
++
++    raise IngestError("Unsupported payload format. Expected .zip or .xml")
++
++
++__all__ = ["ingest_input", "IngestError", "ensure_workdir"]
+diff --git a/src/shopware_bmecat/logging_utils.py b/src/shopware_bmecat/logging_utils.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..5ce0c24c2881c63c6ff1a41892f8e9ead0f12fb4
+--- /dev/null
++++ b/src/shopware_bmecat/logging_utils.py
+@@ -0,0 +1,67 @@
++"""Logging utilities for the Shopware BMEcat import service."""
++from __future__ import annotations
++
++import logging
++import logging.config
++from pathlib import Path
++from typing import Any, Dict
++
++
++DEFAULT_LOG_LEVEL = "INFO"
++
++
++def build_logging_config(log_dir: Path | None = None, level: str = DEFAULT_LOG_LEVEL) -> Dict[str, Any]:
++    """Return a dictConfig-compatible logging configuration.
++
++    Parameters
++    ----------
++    log_dir: Path | None
++        Optional directory for log files. When provided, a rotating file handler is configured.
++    level: str
++        Default log level.
++    """
++
++    handlers: Dict[str, Any] = {
++        "console": {
++            "class": "logging.StreamHandler",
++            "formatter": "detailed",
++            "level": level,
++        }
++    }
++
++    if log_dir:
++        log_dir.mkdir(parents=True, exist_ok=True)
++        handlers["file"] = {
++            "class": "logging.handlers.RotatingFileHandler",
++            "filename": str(log_dir / "pipeline.log"),
++            "maxBytes": 5 * 1024 * 1024,
++            "backupCount": 3,
++            "formatter": "detailed",
++            "level": level,
++        }
++
++    return {
++        "version": 1,
++        "disable_existing_loggers": False,
++        "formatters": {
++            "detailed": {
++                "format": "%(asctime)s %(levelname)s [%(name)s] %(message)s",
++            }
++        },
++        "handlers": handlers,
++        "root": {
++            "level": level,
++            "handlers": list(handlers.keys()),
++        },
++    }
++
++
++def configure_logging(log_dir: Path | None = None, level: str = DEFAULT_LOG_LEVEL) -> None:
++    """Configure application logging."""
++
++    config = build_logging_config(log_dir=log_dir, level=level)
++    logging.config.dictConfig(config)
++    logging.getLogger(__name__).debug("Logging configured", extra={"log_dir": log_dir, "level": level})
++
++
++__all__ = ["configure_logging", "build_logging_config"]
+diff --git a/src/shopware_bmecat/normalize.py b/src/shopware_bmecat/normalize.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..c89386ead912bd5943abc3819cf899fad5796f83
+--- /dev/null
++++ b/src/shopware_bmecat/normalize.py
+@@ -0,0 +1,52 @@
++"""Normalization routines for BMEcat products."""
++from __future__ import annotations
++
++import logging
++from typing import Dict, Iterable, Iterator, List
++
++logger = logging.getLogger(__name__)
++
++
++DEFAULT_TAX_RATE = 19
++
++
++def normalize_product(raw: Dict, source: str) -> Dict:
++    """Convert a raw BMEcat product dict into the canonical product model."""
++
++    external_id = raw.get("supplier_pid") or raw.get("external_id")
++    if not external_id:
++        raise ValueError("Raw product missing supplier_pid/external_id")
++
++    canonical = {
++        "external_id": external_id,
++        "source": source,
++        "name": raw.get("name"),
++        "description": raw.get("description"),
++        "manufacturer": raw.get("manufacturer"),
++        "ean": raw.get("ean"),
++        "tax_rate": raw.get("tax_rate", DEFAULT_TAX_RATE),
++        "prices": raw.get("prices", []),
++        "etim": raw.get("etim", {}),
++        "images": raw.get("images", []),
++    }
++
++    return canonical
++
++
++def normalize_products(raw_products: Iterable[Dict], source: str) -> Iterator[Dict]:
++    """Yield canonical product models from raw product dictionaries."""
++
++    for raw in raw_products:
++        try:
++            yield normalize_product(raw, source=source)
++        except Exception as exc:  # pragma: no cover - defensive parsing
++            logger.exception("Failed to normalize product", exc_info=exc, extra={"raw": raw})
++
++
++def collect_products(iterator: Iterable[Dict]) -> List[Dict]:
++    """Collect a generator into a list. Helps with testing and small batches."""
++
++    return list(iterator)
++
++
++__all__ = ["normalize_product", "normalize_products", "collect_products", "DEFAULT_TAX_RATE"]
+diff --git a/src/shopware_bmecat/parse_bmecat.py b/src/shopware_bmecat/parse_bmecat.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..1637e32bd54ef4ea5cc248c6151f39e503905383
+--- /dev/null
++++ b/src/shopware_bmecat/parse_bmecat.py
+@@ -0,0 +1,94 @@
++"""Streaming BMEcat parser.
++
++The parser yields normalized dictionaries for each ARTICLE element to avoid
++loading the full document into memory. Only a subset of fields is extracted to
++bootstrap the canonical normalization step; any additional XML content is
++preserved inside the raw payload stored in the staging database.
++"""
++from __future__ import annotations
++
++import logging
++import xml.etree.ElementTree as ET
++from pathlib import Path
++from typing import Dict, Generator, Iterable
++
++logger = logging.getLogger(__name__)
++
++
++class ParseError(RuntimeError):
++    """Raised when the BMEcat payload cannot be parsed."""
++
++
++def _extract_text(parent: ET.Element, tag: str) -> str | None:
++    child = parent.find(tag)
++    if child is not None and child.text:
++        return child.text.strip()
++    return None
++
++
++def _extract_prices(article: ET.Element) -> Iterable[Dict]:
++    for price_el in article.findall("ARTICLE_PRICEDETAILS/ARTICLE_PRICE"):
++        try:
++            price_type = price_el.attrib.get("price_type", "list")
++            amount_text = _extract_text(price_el, "PRICE_AMOUNT")
++            currency = _extract_text(price_el, "PRICE_CURRENCY") or "EUR"
++            min_qty_text = _extract_text(price_el, "LOWER_BOUND")
++            amount = float(amount_text) if amount_text else None
++            min_qty = int(min_qty_text) if min_qty_text else 1
++            if amount is not None:
++                yield {
++                    "type": price_type,
++                    "amount": amount,
++                    "currency": currency,
++                    "min_quantity": min_qty,
++                }
++        except Exception as exc:  # pragma: no cover - defensive parsing
++            logger.warning(
++                "Failed to parse ARTICLE_PRICE entry", exc_info=exc, extra={"price": ET.tostring(price_el, encoding="unicode")}
++            )
++
++
++def iter_products(xml_path: Path) -> Generator[Dict, None, None]:
++    """Yield product dictionaries from a BMEcat XML file using iterparse."""
++
++    if not xml_path.exists():
++        raise ParseError(f"XML not found: {xml_path}")
++
++    context = ET.iterparse(xml_path, events=("start", "end"))
++    _, root = next(context)  # prime iterator and grab root
++
++    for event, elem in context:
++        if event == "end" and elem.tag.endswith("ARTICLE"):
++            try:
++                supplier_pid = _extract_text(elem, "SUPPLIER_AID") or _extract_text(elem, "SUPPLIER_PID")
++                data: Dict[str, object] = {
++                    "supplier_pid": supplier_pid,
++                    "manufacturer": _extract_text(elem, "MANUFACTURER_NAME"),
++                    "name": _extract_text(elem, "ARTICLE_DETAILS/DESCRIPTION_SHORT"),
++                    "description": _extract_text(elem, "ARTICLE_DETAILS/DESCRIPTION_LONG"),
++                    "ean": _extract_text(elem, "ARTICLE_DETAILS/EAN"),
++                    "etim": {},  # placeholder; ETIM data can be nested deeply
++                    "prices": list(_extract_prices(elem)),
++                    "raw_xml": ET.tostring(elem, encoding="unicode"),
++                }
++                images = []
++                for mime in elem.findall("MIME_INFO/MIME"):
++                    source = _extract_text(mime, "MIME_SOURCE")
++                    if source:
++                        images.append(source)
++                data["images"] = images
++                yield data
++            except Exception as exc:  # pragma: no cover - defensive parsing
++                logger.exception("Failed to parse ARTICLE element", exc_info=exc)
++            finally:
++                root.clear()
++
++
++def parse_bmecat(xml_path: Path) -> Iterable[Dict]:
++    """Public convenience wrapper returning a generator for BMEcat products."""
++
++    logger.info("Parsing BMEcat file", extra={"path": str(xml_path)})
++    return iter_products(xml_path)
++
++
++__all__ = ["parse_bmecat", "iter_products", "ParseError"]
+diff --git a/src/shopware_bmecat/shopware_sync.py b/src/shopware_bmecat/shopware_sync.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..8c9476db5110d114b76f1a444167424d7325cb42
+--- /dev/null
++++ b/src/shopware_bmecat/shopware_sync.py
+@@ -0,0 +1,104 @@
++"""Shopware 6 Sync API client."""
++from __future__ import annotations
++
++import logging
++import os
++from dataclasses import dataclass
++from typing import Dict, Iterable, List, Optional
++
++import requests
++
++logger = logging.getLogger(__name__)
++
++
++@dataclass
++class ShopwareConfig:
++    api_url: str
++    token_url: str
++    client_id: str
++    client_secret: str
++    batch_size: int = 250
++    verify_ssl: bool = True
++
++
++class ShopwareSyncClient:
++    def __init__(self, config: ShopwareConfig):
++        self.config = config
++        self._token: Optional[str] = None
++
++    def authenticate(self) -> str:
++        if self._token:
++            return self._token
++        payload = {
++            "grant_type": "client_credentials",
++            "client_id": self.config.client_id,
++            "client_secret": self.config.client_secret,
++        }
++        response = requests.post(self.config.token_url, data=payload, verify=self.config.verify_ssl, timeout=30)
++        response.raise_for_status()
++        data = response.json()
++        token = data.get("access_token")
++        if not token:
++            raise RuntimeError("Shopware auth response missing access_token")
++        self._token = token
++        logger.info("Authenticated with Shopware")
++        return token
++
++    def _headers(self) -> Dict[str, str]:
++        token = self.authenticate()
++        return {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
++
++    def _build_upsert_payload(self, products: List[Dict]) -> Dict:
++        actions = []
++        for product in products:
++            payload = {
++                "action": "upsert",
++                "entity": "product",
++                "payload": [
++                    {
++                        "productNumber": f"{product['source']}::{product['external_id']}",
++                        "name": product.get("name") or product["external_id"],
++                        "description": product.get("description"),
++                        "manufacturer": product.get("manufacturer"),
++                        "ean": product.get("ean"),
++                        "active": True,
++                    }
++                ],
++            }
++            actions.append(payload)
++        return {"syncOperations": actions}
++
++    def send_batch(self, products: List[Dict]) -> None:
++        if not products:
++            return
++        url = f"{self.config.api_url.rstrip('/')}/api/_action/sync"
++        payload = self._build_upsert_payload(products)
++        response = requests.post(url, json=payload, headers=self._headers(), verify=self.config.verify_ssl, timeout=60)
++        if not response.ok:
++            logger.error("Shopware sync failed", extra={"status": response.status_code, "body": response.text})
++            response.raise_for_status()
++        logger.info("Synced products batch", extra={"count": len(products)})
++
++    def sync_delta(self, delta_products: Iterable[Dict]) -> None:
++        batch: List[Dict] = []
++        for product in delta_products:
++            batch.append(product)
++            if len(batch) >= self.config.batch_size:
++                self.send_batch(batch)
++                batch = []
++        if batch:
++            self.send_batch(batch)
++
++
++def config_from_env(api_url: str, token_url: str, batch_size: int = 250, verify_ssl: bool = True) -> ShopwareConfig:
++    return ShopwareConfig(
++        api_url=api_url,
++        token_url=token_url,
++        client_id=os.environ.get("SHOPWARE_CLIENT_ID", ""),
++        client_secret=os.environ.get("SHOPWARE_CLIENT_SECRET", ""),
++        batch_size=batch_size,
++        verify_ssl=verify_ssl,
++    )
++
++
++__all__ = ["ShopwareSyncClient", "ShopwareConfig", "config_from_env"]
+diff --git a/src/shopware_bmecat/staging.py b/src/shopware_bmecat/staging.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..0028efb5f15f0009021e872ee1141202d0117166
+--- /dev/null
++++ b/src/shopware_bmecat/staging.py
+@@ -0,0 +1,286 @@
++"""PostgreSQL staging layer for the BMEcat pipeline."""
++from __future__ import annotations
++
++import contextlib
++import json
++import logging
++from dataclasses import dataclass
++from datetime import datetime, timezone
++from typing import Dict, Iterable, Iterator, List, Optional, Tuple
++
++from sqlalchemy import JSON, TIMESTAMP, BigInteger, Column, DateTime, Index, Integer, MetaData, String, Table, Text, create_engine, func
++from sqlalchemy.dialects.postgresql import JSONB
++from sqlalchemy.engine import Connection, Engine
++from sqlalchemy.exc import SQLAlchemyError
++from sqlalchemy.sql import select
++
++logger = logging.getLogger(__name__)
++
++
++metadata = MetaData()
++
++import_runs = Table(
++    "import_runs",
++    metadata,
++    Column("id", Integer, primary_key=True, autoincrement=True),
++    Column("source", String(255), nullable=False),
++    Column("payload_path", Text, nullable=False),
++    Column("status", String(64), nullable=False, default="ingested"),
++    Column("message", Text, nullable=True),
++    Column("created_at", TIMESTAMP(timezone=True), server_default=func.now(), nullable=False),
++    Column("updated_at", TIMESTAMP(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False),
++)
++
++products_raw = Table(
++    "products_raw",
++    metadata,
++    Column("id", BigInteger, primary_key=True, autoincrement=True),
++    Column("import_run_id", Integer, nullable=False),
++    Column("source", String(255), nullable=False),
++    Column("external_id", String(255), nullable=False),
++    Column("payload", JSONB, nullable=False),
++    Column("raw_xml", Text, nullable=True),
++    Column("created_at", TIMESTAMP(timezone=True), server_default=func.now(), nullable=False),
++    Index("idx_products_raw_source_external", "source", "external_id"),
++)
++
++products_normalized = Table(
++    "products_normalized",
++    metadata,
++    Column("id", BigInteger, primary_key=True, autoincrement=True),
++    Column("import_run_id", Integer, nullable=False),
++    Column("source", String(255), nullable=False),
++    Column("external_id", String(255), nullable=False),
++    Column("payload", JSONB, nullable=False),
++    Column("created_at", TIMESTAMP(timezone=True), server_default=func.now(), nullable=False),
++    Index("idx_products_norm_source_external", "source", "external_id"),
++)
++
++products_delta = Table(
++    "products_delta",
++    metadata,
++    Column("id", BigInteger, primary_key=True, autoincrement=True),
++    Column("import_run_id", Integer, nullable=False),
++    Column("source", String(255), nullable=False),
++    Column("external_id", String(255), nullable=False),
++    Column("hash", String(128), nullable=False),
++    Column("payload", JSONB, nullable=False),
++    Column("status", String(64), nullable=False, default="pending"),
++    Column("changed_at", TIMESTAMP(timezone=True), server_default=func.now(), nullable=False),
++    Index("idx_delta_source_external", "source", "external_id"),
++)
++
++import_errors = Table(
++    "import_errors",
++    metadata,
++    Column("id", BigInteger, primary_key=True, autoincrement=True),
++    Column("import_run_id", Integer, nullable=False),
++    Column("source", String(255), nullable=False),
++    Column("external_id", String(255), nullable=True),
++    Column("stage", String(64), nullable=False),
++    Column("message", Text, nullable=False),
++    Column("created_at", TIMESTAMP(timezone=True), server_default=func.now(), nullable=False),
++)
++
++media_queue = Table(
++    "media_queue",
++    metadata,
++    Column("id", BigInteger, primary_key=True, autoincrement=True),
++    Column("source", String(255), nullable=False),
++    Column("external_id", String(255), nullable=False),
++    Column("url", Text, nullable=False),
++    Column("status", String(64), nullable=False, default="pending"),
++    Column("created_at", TIMESTAMP(timezone=True), server_default=func.now(), nullable=False),
++    Index("idx_media_source_external", "source", "external_id"),
++)
++
++
++@dataclass
++class DatabaseConfig:
++    url: str
++
++
++class StagingDAO:
++    """Data access object for interacting with the staging schema."""
++
++    def __init__(self, database_url: str):
++        self.database_url = database_url
++        self.engine: Engine = create_engine(database_url, pool_pre_ping=True, future=True)
++        logger.debug("StagingDAO initialized", extra={"database_url": database_url})
++
++    def ensure_schema(self) -> None:
++        metadata.create_all(self.engine)
++        logger.info("Ensured staging schema is up to date")
++
++    @contextlib.contextmanager
++    def _connect(self) -> Iterator[Connection]:
++        with self.engine.begin() as conn:
++            yield conn
++
++    def start_import_run(self, source: str, payload_path: str) -> int:
++        with self._connect() as conn:
++            result = conn.execute(
++                import_runs.insert().values(
++                    source=source, payload_path=payload_path, status="ingested"
++                )
++            )
++            run_id = int(result.inserted_primary_key[0])
++            logger.info("Import run started", extra={"run_id": run_id, "source": source})
++            return run_id
++
++    def update_run_status(self, run_id: int, status: str, message: str | None = None) -> None:
++        with self._connect() as conn:
++            conn.execute(
++                import_runs.update()
++                .where(import_runs.c.id == run_id)
++                .values(status=status, message=message, updated_at=datetime.now(timezone.utc))
++            )
++            logger.info("Run status updated", extra={"run_id": run_id, "status": status})
++
++    def latest_run_by_status(self, status: str) -> Optional[int]:
++        with self.engine.connect() as conn:
++            result = conn.execute(
++                select(import_runs.c.id)
++                .where(import_runs.c.status == status)
++                .order_by(import_runs.c.created_at.desc())
++                .limit(1)
++            ).scalar()
++            return int(result) if result else None
++
++    def get_run(self, run_id: int) -> Optional[Dict]:
++        with self.engine.connect() as conn:
++            row = conn.execute(select(import_runs).where(import_runs.c.id == run_id)).first()
++            return dict(row._mapping) if row else None
++
++    def insert_raw_product(self, run_id: int, source: str, raw: Dict) -> None:
++        payload = {k: v for k, v in raw.items() if k != "raw_xml"}
++        external_id = payload.get("supplier_pid") or payload.get("external_id")
++        with self._connect() as conn:
++            conn.execute(
++                products_raw.insert().values(
++                    import_run_id=run_id,
++                    source=source,
++                    external_id=external_id,
++                    payload=payload,
++                    raw_xml=raw.get("raw_xml"),
++                )
++            )
++
++    def stream_raw_products(self, run_id: int) -> Iterator[Dict]:
++        with self.engine.connect() as conn:
++            result = conn.execute(
++                select(products_raw.c.payload, products_raw.c.raw_xml).where(products_raw.c.import_run_id == run_id)
++            )
++            for row in result:
++                payload = dict(row.payload)
++                if row.raw_xml:
++                    payload["raw_xml"] = row.raw_xml
++                yield payload
++
++    def insert_normalized_product(self, run_id: int, source: str, canonical: Dict) -> None:
++        with self._connect() as conn:
++            conn.execute(
++                products_normalized.insert().values(
++                    import_run_id=run_id,
++                    source=source,
++                    external_id=canonical["external_id"],
++                    payload=canonical,
++                )
++            )
++
++    def stream_normalized_products(self, run_id: int) -> Iterator[Dict]:
++        with self.engine.connect() as conn:
++            result = conn.execute(
++                select(products_normalized.c.payload).where(products_normalized.c.import_run_id == run_id)
++            )
++            yield from (dict(row.payload) for row in result)
++
++    def fetch_latest_hashes(self, source: str) -> Dict[str, str]:
++        """Return latest known hashes per external product id for a source."""
++        with self.engine.connect() as conn:
++            stmt = (
++                select(products_delta.c.external_id, products_delta.c.hash)
++                .where(products_delta.c.source == source)
++                .order_by(products_delta.c.external_id, products_delta.c.changed_at.desc())
++            )
++            rows = conn.execute(stmt).fetchall()
++
++        latest: Dict[str, str] = {}
++        for external_id, hash_value in rows:
++            if external_id not in latest:
++                latest[external_id] = hash_value
++        return latest
++
++    def insert_delta_record(self, run_id: int, source: str, canonical: Dict, hash_value: str, status: str = "pending") -> None:
++        with self._connect() as conn:
++            conn.execute(
++                products_delta.insert().values(
++                    import_run_id=run_id,
++                    source=source,
++                    external_id=canonical["external_id"],
++                    hash=hash_value,
++                    payload=canonical,
++                    status=status,
++                )
++            )
++
++    def pending_deltas(self, run_id: Optional[int] = None, source: Optional[str] = None) -> List[Dict]:
++        stmt = select(products_delta)
++        if run_id is not None:
++            stmt = stmt.where(products_delta.c.import_run_id == run_id)
++        if source is not None:
++            stmt = stmt.where(products_delta.c.source == source)
++        stmt = stmt.where(products_delta.c.status == "pending")
++        with self.engine.connect() as conn:
++            result = conn.execute(stmt)
++            return [dict(row._mapping) for row in result]
++
++    def mark_delta_status(self, delta_ids: Iterable[int], status: str) -> None:
++        with self._connect() as conn:
++            conn.execute(
++                products_delta.update().where(products_delta.c.id.in_(list(delta_ids))).values(status=status)
++            )
++
++    def record_error(self, run_id: int, source: str, stage: str, message: str, external_id: str | None = None) -> None:
++        with self._connect() as conn:
++            conn.execute(
++                import_errors.insert().values(
++                    import_run_id=run_id,
++                    source=source,
++                    external_id=external_id,
++                    stage=stage,
++                    message=message,
++                )
++            )
++            logger.error("Recorded import error", extra={"stage": stage, "message": message})
++
++    def enqueue_media(self, source: str, external_id: str, urls: Iterable[str]) -> None:
++        url_list = [url for url in urls if url]
++        if not url_list:
++            return
++        with self._connect() as conn:
++            conn.execute(
++                media_queue.insert(),
++                [
++                    {
++                        "source": source,
++                        "external_id": external_id,
++                        "url": url,
++                        "status": "pending",
++                    }
++                    for url in url_list
++                ],
++            )
++
++
++__all__ = [
++    "DatabaseConfig",
++    "StagingDAO",
++    "metadata",
++    "import_runs",
++    "products_raw",
++    "products_normalized",
++    "products_delta",
++    "import_errors",
++    "media_queue",
++]
+ 
+EOF
+)
