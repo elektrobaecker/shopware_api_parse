@@ -1,0 +1,22 @@
+source_name: bmecat
+mapping:
+  product_number: "SUPPLIER_PID"
+  name: "DESCRIPTION_SHORT"
+  description: "DESCRIPTION_LONG"
+  ean: "INTERNATIONAL_PID"
+  manufacturer: "MANUFACTURER_NAME"
+  price_selector:
+    price_type: "net_list"
+    currency: "EUR"
+shopware:
+  base_url: "https://shopware.example.com"
+  client_id: "${SHOPWARE_CLIENT_ID}"
+  client_secret: "${SHOPWARE_CLIENT_SECRET}"
+  # token: "${SHOPWARE_TOKEN}"
+  sales_channel_id: null
+  default_visibility: 30
+tax:
+  default_rate: 19
+  mapping:
+    "0.19": 19
+    "0.07": 7
